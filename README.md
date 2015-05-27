@@ -1,4 +1,4 @@
-## Motivation
+##  Motivation
 This program was created under the 2 hours of suspense before SMU's Oasis portal release our actual grade. Before which they only give you the Grade point, which is a sum of your grades.  
 
 ## Installation
