@@ -1,9 +1,5 @@
 // Author: Tommy Soh
 // Grades calculator
-/*
-	Before the grades are released on Oasis (an SMU Portal), they release a grade point which is a sum of grades from all your individual modules
-	This program helps to generate the possibilities of your individual modules from grade point which is awesome. \nBy Tommy 
-*/
 import java.util.*;
 
 public class Grade{
@@ -47,11 +43,7 @@ public class Grade{
 			System.out.println(res);
 		}
 	}
-	/*
-		addModuleGradeAndCheck is a recursive method by depth and exits if calls itself more than numberOfModulesTaken
-		Could potentially count at every point if size of resulttoprint already exceed gradepoint which then should exit. but I think it may have a longer run time to calculate that way 
-		Potentially bad if numberOfModulesTaken is large, but it isn't... students probably can't take so many modules but thats an assumption which is not handled
-	*/
+
 	public static void addModuleGradeAndCheck(ArrayList<Float> resultToPrint){
 		// exit if more than numberOfModulesTaken already added to arraylist
 		if(resultToPrint.size()>=numberOfModulesTaken){
