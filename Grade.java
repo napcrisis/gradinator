@@ -7,13 +7,13 @@
 import java.util.*;
 
 public class Grade{
-	public static float[] grades;
+	public static final float[] GRADES;
 	public static HashMap<Float,String> gradesMap;
 	public static float your_grade_point = 0.0f; // total grade
 	public static int numberOfModulesTaken = 5; // number of modules taken
 	public static HashSet<String> results;
 	static {
-		grades = new float[]{1.0f, 1.3f, 1.7f, 2.0f, 2.3f, 2.7f, 3.0f, 3.3f, 3.7f, 4.0f, 4.3f};
+		GRADES = new float[]{1.0f, 1.3f, 1.7f, 2.0f, 2.3f, 2.7f, 3.0f, 3.3f, 3.7f, 4.0f, 4.3f};
 		gradesMap = new HashMap<Float,String>();
 		results = new HashSet<String>();
 
@@ -38,7 +38,7 @@ public class Grade{
 		your_grade_point = reader.nextFloat();
 
 		System.out.print("Please enter the number of modules you are taking this sem: ");
-		numberOfModulesTaken =reader.nextInt(); 
+		numberOfModulesTaken = reader.nextInt(); 
 
 		addModuleGradeAndCheck(new ArrayList<Float>());
 
@@ -70,7 +70,7 @@ public class Grade{
 			return;
 		}
 		// goes through all possible grades and calls them
-		for(float f: grades){
+		for(float f: GRADES){
 			ArrayList<Float> temp = (ArrayList<Float>)resultToPrint.clone();
 			temp.add(f);
 			addModuleGradeAndCheck(temp);
